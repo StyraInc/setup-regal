@@ -1,6 +1,6 @@
 # Setup Regal
 
-GitHub action to configure the [Regal](https://github.com/StyraInc/regal) CLI.
+GitHub action to configure [Regal](https://github.com/StyraInc/regal), the linter for Rego.
 
 ## Basic Usage
 
@@ -18,12 +18,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Setup Regal
-      uses: StyraInc/setup-regal@main
+      uses: StyraInc/setup-regal@v0.2.0
       with:
         version: latest
 
     - name: Lint
-      run: regal lint --format=github ./policy 
+      run: regal lint --format github ./policy
 ```
 
 ## Choose Regal Version
@@ -33,13 +33,13 @@ jobs:
 Using the latest version of Regal allows you to keep up-to-date with the latest Rules and best practices. However,
 it might mean that policies that once passed, will need to be updated to pass with the latest version of Regal's rules.
 
-> [!NOTE]  
+> [!NOTE]
 > You can always disable rules using [Regal config](https://docs.styra.com/regal/#configuration).
 
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@main
+    uses: StyraInc/setup-regal@v0.2.0
     with:
       version: latest
 ```
@@ -50,7 +50,7 @@ environments.
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@main
+    uses: StyraInc/setup-regal@v0.2.0
     with:
       version: x.y.z
 ```
@@ -60,7 +60,7 @@ You can also use a SemVer or [SemVer range](https://www.npmjs.com/package/semver
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@main
+    uses: StyraInc/setup-regal@v0.2.0
     with:
       version: 0.10
 ```
@@ -68,7 +68,7 @@ steps:
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@main
+    uses: StyraInc/setup-regal@v0.2.0
     with:
       version: <0.10
 ```
@@ -78,7 +78,7 @@ steps:
 The action supports the following inputs:
 
 - `version`: Optional, defaults to `latest`. [SemVer ranges](https://www.npmjs.com/package/semver#ranges) are supported too.
-- `github-token`: Optional, defaults to `${{ github.token }}`. 
+- `github-token`: Optional, defaults to `${{ github.token }}`.
 
 ## Credits
 
