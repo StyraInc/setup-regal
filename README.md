@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Setup Regal
-      uses: StyraInc/setup-regal@v0.2.0
+      uses: StyraInc/setup-regal@v1
       with:
         version: latest
 
@@ -39,7 +39,7 @@ it might mean that policies that once passed, will need to be updated to pass wi
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@v0.2.0
+    uses: StyraInc/setup-regal@v1
     with:
       version: latest
 ```
@@ -50,7 +50,7 @@ environments.
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@v0.2.0
+    uses: StyraInc/setup-regal@v1
     with:
       version: x.y.z
 ```
@@ -60,7 +60,7 @@ You can also use a SemVer or [SemVer range](https://www.npmjs.com/package/semver
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@v0.2.0
+    uses: StyraInc/setup-regal@v1
     with:
       version: 0.10
 ```
@@ -68,7 +68,7 @@ steps:
 ```yml
 steps:
   - name: Setup Regal
-    uses: StyraInc/setup-regal@v0.2.0
+    uses: StyraInc/setup-regal@v1
     with:
       version: <0.10
 ```
